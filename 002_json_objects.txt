@@ -1,0 +1,51 @@
+JSON Objects, Complex and nested types
+Notes: 1) Objects are unordered sets of key-value pairs.
+       2) Keys must be unique
+       3) Objects are enclosed in curly brackets is an object.
+
+» JSON object with elements: a simple object element, a nested object element, object array
+»»
+<html>
+   <title>Tinitiate JSON object with array and simple type example <title/>
+   <body>
+      <h4>Tinitiate: object with array and simple type in javascript </h2>
+
+      <script>
+         // The below variable (object) has 2 elements one a simple object and the other an array
+         var WorldDetails = {
+                               // Simple object - element
+                               topic: "big three nations",
+
+                               // key with Object value
+                               category: { economy:"ppp",  },
+
+                               // Array object - element
+                               Big3:
+                               [
+                                  { country: 'USA', population: '300 Million', capital: "Washington D.C" }
+                                 ,{ country: 'CHINA', population: '1.4 Billion', capital: "Bejing" }
+                                 ,{ country: 'INDIA', population: '1.2 Billion', capital: "New Delhi" }
+                               ]
+                            };
+
+         // Print the Simple object : element key-value
+         document.writeln(WorldDetails.topic);
+
+         // print the key with Object value
+         document.writeln(WorldDetails.category.economy);
+
+         // Print the details by the INDEX of the array, index starts from ONE (or ZERO)
+         document.writeln(WorldDetails.Big3[1].country);
+         document.writeln(WorldDetails.Big3[1].population);
+         document.writeln(WorldDetails.Big3[1].capital);
+         // Index 2
+         document.writeln(WorldDetails.Big3[2].country);
+         document.writeln(WorldDetails.Big3[2].population);
+         document.writeln(WorldDetails.Big3[2].capital);
+         // Index 3
+         document.writeln(WorldDetails.Big3[3].country);
+         document.writeln(WorldDetails.Big3[3].population);
+         document.writeln(WorldDetails.Big3[3].capital);
+      </script>
+   </body>
+</html>
