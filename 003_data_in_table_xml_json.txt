@@ -1,0 +1,101 @@
+JSON Objects, Complex and nested types
+Notes: 1) This script demonstrates sample data in RDBMS table, XML and JSON formats
+
+» Sample data in a relational database table
+»»
+
+1) There are 3 tables (WorldCountry, CountryProvince, CountryProvinceCities)
+
+WorldCountry
+CountryName  CountryCapital
+-----------  ---------------
+USA          Washington D.C
+CHINA        Bejing
+INDIA        New Delhi
+
+CountryProvince
+CountryName  ProvinceName           ProvinceCapital
+-----------  ---------------------  ---------------
+USA          New York               Albany
+USA          New Jersey             Trenton
+China        Tianjin Municipality   Tianjin
+China        Hebei Province         Shijiazhuang
+
+
+CountryProvinceCities
+CountryName  ProvinceName           ProvinceCity
+-----------  ---------------------  ---------------
+USA          New York               Albany
+USA          New York               New York
+USA          New Jersey             Trenton
+USA          New Jersey             Newark
+China        Tianjin Municipality   Tianjin
+China        Tianjin Municipality   Hexi
+China        Hebei Province         Shijiazhuang
+China        Hebei Province         Chengde
+
+
+2) XML of the above Data
+
+<WorldCountries>
+   <WorldCountry>
+      <Country>
+         <CountryName>USA</CountryName>
+         <CountryCapital>Washington D.C</CountryCapital>
+         <CountryProvince ProvinceName="New York">
+               <ProvinceCapital>Albany</ProvinceCapital>
+               <ProvinceCity id=1>Albany</ProvinceCity>
+               <ProvinceCity id=2>New York</ProvinceCity>
+         </CountryProvince>
+         <CountryProvince>
+               <ProvinceName>New Jersey</ProvinceName>
+               <ProvinceCapital>Trenton</ProvinceCapital>
+               <ProvinceCity id=1>Trenton</ProvinceCity>
+               <ProvinceCity id=2>newark</ProvinceCity>
+         </CountryProvince>
+      <Country>
+
+      <Country>
+         <CountryName>China</CountryName>
+         <CountryCapital>Bejing</CountryCapital>
+         <CountryProvince ProvinceName="Tianjin Municipality">
+               <ProvinceCapital>Tianjin</ProvinceCapital>
+               <ProvinceCity id=1>Tianjin</ProvinceCity>
+               <ProvinceCity id=2>Hexi</ProvinceCity>
+         </CountryProvince>
+         <CountryProvince ProvinceName="Hebei Province">
+               <ProvinceCapital>Shijiazhuang</ProvinceCapital>
+               <ProvinceCity id=1>Shijiazhuang</ProvinceCity>
+               <ProvinceCity id=2>Chengde</ProvinceCity>
+         </CountryProvince>
+      <Country>
+   </WorldCountry>
+</WorldCountries>
+
+3) JSON of the above relational table data
+
+WorldCountries = { 
+                    [
+                       { country: 'USA'
+                         capital: "Washington D.C"
+                         CountryProvince: [  { ProvinceName: "New York", ProvinceCapital:"Albany",
+                                                                       , [ {ProvinceCity:"Albany"},{ProvinceCity:"New York"} ]
+                                             }
+                                            ,{ ProvinceName: "New jersey",  ProvinceCapital:"Trenton" 
+                                                                       , [ {ProvinceCity:"Trenton"},{ProvinceCity:"Newark"} ]
+                                             }
+                                          ]
+                       },
+                       { country: 'CHINA'
+                         capital: "Bejing"
+                         CountryProvince: [  { ProvinceName: "Tianjin Municipality",  ProvinceCapital:"Tianjin",
+                                                                                     ,[ {ProvinceCity:"Tianjin"},{ProvinceCity:"Hexi"} ]
+                                             }
+                                            ,{ ProvinceName: "Hebei Province",        ProvinceCapital:"Shijiazhuang",
+                                                                                    , [ {ProvinceCity:"Shijiazhuang"},{ProvinceCity:"Chengde"} ]
+                                             }
+                                          ]
+                       }
+                       
+                   ]
+               };
