@@ -1,7 +1,4 @@
-<pre>
 JSON : JavaScript Object Notation. (Lightweight text-data interchange format)
-</pre>
-<pre>
 Notes: 1) It is used to exchange and store text data, similar to XML.
        2) It has a smaller footprint (as there are less tags) than XML
           and hence quicker to parse.
@@ -11,14 +8,10 @@ Notes: 1) It is used to exchange and store text data, similar to XML.
             * Data separated by comma
             * data enclosed in curly brackets
             * data arrays enclosed in square brackets
-</pre>
 
-<pre>
+            
 » Simple JSON data, with one element
 »»
-</pre>
-
-<pre>
 <html>
    <title>Tinitiate JSON Simple with one element example <title/>
    <body>
@@ -30,14 +23,9 @@ Notes: 1) It is used to exchange and store text data, similar to XML.
       </script>
    </body>
 </html>
-</pre>
 
-<pre>
 » Simple JSON data, with multiple element
 »»
-</pre>
-
-<pre>
 <html>
    <title>Tinitiate JSON Simple with multiple elements example <title/>
    <body>
@@ -50,13 +38,9 @@ Notes: 1) It is used to exchange and store text data, similar to XML.
       </script>
    </body>
 </html>
-</pre>
 
-<pre>
 » Simple JSON data, with multiple elements, different datatypes
 »»
-</pre>
-<pre>
 <html>
    <title>Tinitiate JSON Simple with multiple elements, different datatypes example <title/>
    <body>
@@ -74,16 +58,11 @@ Notes: 1) It is used to exchange and store text data, similar to XML.
       </script>
    </body>
 </html>
-</pre>
 
-<pre>
 » JSON array data example.
 » NOTES: 1) refer to the elements by the INDEX of the array
          2) Index starts from ZERO
 »»
-</pre>
-
-<pre>
 <html>
    <title>Tinitiate JSON Array data example <title/>
    <body>
@@ -111,4 +90,3 @@ Notes: 1) It is used to exchange and store text data, similar to XML.
 
    </body>
 </html>
-</pre>
