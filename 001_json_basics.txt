@@ -1,0 +1,92 @@
+JSON : JavaScript Object Notation. (Lightweight text-data interchange format)
+Notes: 1) It is used to exchange and store text data, similar to XML.
+       2) It has a smaller footprint (as there are less tags) than XML
+          and hence quicker to parse.
+       3) It was popularized with AJAX / JavaScript, as the parsing is very easy.
+       4) JSON syntax rules: 
+            * key-value pair data
+            * Data separated by comma
+            * data enclosed in curly brackets
+            * data arrays enclosed in square brackets
+
+            
+» Simple JSON data, with one element
+»»
+<html>
+   <title>Tinitiate JSON Simple with one element example <title/>
+   <body>
+      <h4>Tinitiate: Simple with one element example in javascript </h2>
+
+      <script>
+         var simpleData = {key: 'SimpleValue'}  // This is a Simple JSON example
+         document.writeln(simpleData.key);    // Prints the "key's" value
+      </script>
+   </body>
+</html>
+
+» Simple JSON data, with multiple element
+»»
+<html>
+   <title>Tinitiate JSON Simple with multiple elements example <title/>
+   <body>
+      <h4>Tinitiate: Simple with multiple elements example in javascript </h2>
+
+      <script>
+         var simpleData = {key1: 'SimpleValue1', key2: 'SimpleValue2'}  // This is a Simple JSON with multiple values
+         document.writeln(simpleData.key1);    // Prints the "key1's" value
+         document.writeln(simpleData.key2);    // Prints the "key2's" value
+      </script>
+   </body>
+</html>
+
+» Simple JSON data, with multiple elements, different datatypes
+»»
+<html>
+   <title>Tinitiate JSON Simple with multiple elements, different datatypes example <title/>
+   <body>
+      <h4>Tinitiate: Simple with multiple elements, different datatypes example in javascript </h2>
+
+      <script>
+         var simpleData = { id:        1,             // This is a Simple JSON with multiple values and datatypes
+                            name:      "Tinitiate",
+                            startdate: new Date("Jan 01, 2012 11:59:59")
+                          }
+
+         document.writeln(simpleData.id);          // Prints the "id's" value
+         document.writeln(simpleData.name);        // Prints the "name's" value
+         document.writeln(simpleData.startdate);   // Prints the "startdate's" value
+      </script>
+   </body>
+</html>
+
+» JSON array data example.
+» NOTES: 1) refer to the elements by the INDEX of the array
+         2) Index starts from ZERO
+»»
+<html>
+   <title>Tinitiate JSON Array data example <title/>
+   <body>
+      <h4>Tinitiate: Array data JSON example in javascript </h2>
+      <script>
+         // This is a JSON array example
+         var WorldCountry = [
+                               {country: 'USA', population: '300 Million', capital: "Washington D.C"}
+                              ,{country: 'CHINA', population: '1.4 Billion', capital: "Bejing"}
+                              ,{country: 'INDIA', population: '1.2 Billion', capital: "New Delhi"}
+                            ];
+         // Print the details by the INDEX of the array, index starts from ZERO
+         document.writeln(WorldCountry[0].country);
+         document.writeln(WorldCountry[0].population);
+         document.writeln(WorldCountry[0].capital);
+         // for the second index
+         document.writeln(WorldCountry[1].country);
+         document.writeln(WorldCountry[1].population);
+         document.writeln(WorldCountry[1].capital);
+         // for the third index
+         document.writeln(WorldCountry[2].country);
+         document.writeln(WorldCountry[2].population);
+         document.writeln(WorldCountry[2].capital);
+      </script>
+
+   </body>
+</html>
